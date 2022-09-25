@@ -47,17 +47,17 @@ modules:
         url: https://gitlab.com/libeigen/eigen/-/archive/3.4.0/eigen-3.4.0.tar.bz2
         sha256: b4c198460eba6f28d34894e3a5710998818515104d6e74e5cc331ce31e46e626
   - name: wxgtk3
-    buildsystem: autotools
+    buildsystem: cmake-ninja
     sources:
       - type: archive
-        url: https://github.com/wxWidgets/wxWidgets/releases/download/v3.0.5.1/wxWidgets-3.0.5.1.tar.bz2
-        sha1: 406ac736f61d88a3a866aa501e01e408a642c6e7
+        url: https://github.com/wxWidgets/wxWidgets/releases/download/v3.2.1/wxWidgets-3.2.1.tar.bz2
+        sha1: b5299275abddc7cb5fa92f75c17475ade3bc0532
   - name: darkradiant
     buildsystem: cmake-ninja
     sources:
       - type: archive
-        url: https://github.com/codereader/DarkRadiant/archive/refs/tags/3.2.0.tar.gz
-        sha256: 3dc138cc0e203880e6eb514364af1b94589e34a8480cb7e2a2fc73d49e1523f3
+        url: https://github.com/codereader/DarkRadiant/archive/refs/tags/3.3.0.tar.gz
+        sha256: 5b189676dc6da567b908d611d1383eedd37ae904f2c924c1ee6ac44c253317e0
       - type: file
         path: net.darkradiant.DarkRadiant.metainfo.xml
       - type: file
