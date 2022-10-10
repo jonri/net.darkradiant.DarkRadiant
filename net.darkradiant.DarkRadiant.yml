@@ -55,15 +55,6 @@ modules:
   - name: darkradiant
     buildsystem: cmake-ninja
     sources:
-      - type: archive
-        url: https://github.com/codereader/DarkRadiant/archive/refs/tags/3.3.0.tar.gz
-        sha256: 5b189676dc6da567b908d611d1383eedd37ae904f2c924c1ee6ac44c253317e0
-      - type: file
-        path: net.darkradiant.DarkRadiant.metainfo.xml
-      - type: file
-        path: net.darkradiant.DarkRadiant.png
-    post-install:
-      - desktop-file-edit --set-icon=${FLATPAK_ID} ${FLATPAK_DEST}/share/applications/darkradiant.desktop
-      - install -Dm644 ${FLATPAK_DEST}/share/darkradiant/bitmaps/darkradiant_icon_64x64.png ${FLATPAK_DEST}/share/icons/hicolor/64x64/apps/${FLATPAK_ID}.png
-      - install -Dm644 ${FLATPAK_ID}.png ${FLATPAK_DEST}/share/icons/hicolor/128x128/apps/${FLATPAK_ID}.png
-      - install -Dm644 ${FLATPAK_ID}.metainfo.xml ${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.metainfo.xml
+      - type: git
+        url: https://github.com/codereader/DarkRadiant.git
+        commit: bd348305042b225906da3324499b54d8be7f6ba7
